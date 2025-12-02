@@ -1,247 +1,336 @@
-'use client';
+'use client'
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Browser Timeline — single-file React component
-// TailwindCSS + Framer Motion expected in the project.
+
 
 const CONTENT = {
   timeframes: [
     {
       title: "1990–1995",
       introduction:
-        "Between 1990 and 1995, the web transformed from an academic research network into the first visual, navigable public medium. This period marks the birth of the graphical web browser — a tool that shifted the internet from text-only documents to something ordinary people could explore visually. Tim Berners-Lee had already introduced the first web server and the concept of HTML, but it wasn’t until GUI browsers arrived that the web truly “opened” to the world.\n\nIn 1993, the release of NCSA Mosaic changed everything. It allowed inline images for the first time, meaning visuals could appear on the page instead of downloading separately. This single feature dramatically broadened the web’s appeal. By 1994, Mosaic developers left to form Netscape, whose browser quickly became dominant, setting the stage for the first browser war. Meanwhile, Internet Explorer 1.0 emerged in 1995, based on Mosaic licensing.\n\nThis era was chaotic, experimental, and full of firsts: the earliest HTML elements, the first forms, the first clickable navigation, and the first images embedded directly into documents. Browser standards didn’t exist yet, so browsers freely innovated. The primitive nature of early HTML didn’t stop web creators from experimenting wildly with imagery, structure, and early interactive elements.\n\nBy 1995, with Netscape Navigator and IE entering the scene, commercial interest in the web exploded. Browser innovation accelerated at a pace that had never been seen before in desktop software.",
+        "Between 1990 and 1995 the web moved from CERN research project to the first public, visual network. Tim Berners-Lee created the first browser/editor (WorldWideWeb — later Nexus), and simple text-mode clients (Line Mode Browser, LYNX) made the web accessible on a wide range of terminals. The watershed moment arrived in 1993 with NCSA Mosaic, the first broadly popular graphical browser; in 1994 Netscape Navigator followed and in 1995 Microsoft shipped Internet Explorer, launching the first intense era of browser competition.",
       sections: [
         {
-          headline: "NCSA Mosaic (1993) — First Popular GUI Browser",
+          headline: "WorldWideWeb / Nexus (1990)",
           description:
-            "Mosaic introduced inline images and a user-friendly interface that enabled non-experts to explore the web. Its support for embedded images and a simple GUI were pivotal in turning the web from a text-based research tool into a general-purpose information medium.",
-          image: "https://upload.wikimedia.org/wikipedia/en/2/24/NCSA_Mosaic_Browser.png",
+            "Tim Berners-Lee’s original browser and editor for the NeXT workstation allowed users not only to view but also to edit pages — a defining early design for the web as a read/write medium.",
+          image: "/ressources/worldwideweb.png",
         },
         {
-          headline: "Netscape Navigator (1994) — The First Web Giant",
+          headline: "Line Mode Browser (1991)",
           description:
-            "Netscape Navigator quickly became the dominant browser due to speed, a modern interface, and aggressive development. It popularized many features and commercialized the web experience, helping drive adoption among non-technical users.",
-          image: "https://upload.wikimedia.org/wikipedia/en/0/03/Netscape_Navigator_1.22.png",
+            "A cross-platform, text-based browser written by Nicola Pellow and Tim Berners-Lee to support older terminals; one of the earliest ways non-graphical systems accessed the web.",
+          image: "/ressources/LineModeBrowser.png",
         },
         {
-          headline: "Birth of JavaScript (1995)",
+          headline: "LYNX (1992)",
           description:
-            "Created at Netscape by Brendan Eich, JavaScript added dynamic behavior to static pages — enabling client-side scripting, form validation, and early interactive features that would eventually become core to the web platform.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+            "A customizable, cursor-addressable, text-mode browser first developed in 1992; still maintained and notable as one of the longest-running browser projects.",
+          image: "/ressources/LYNX.png",
         },
         {
-          headline: "Internet Explorer 1.0 (1995)",
+          headline: "NCSA Mosaic (1993) — Graphical Browsing",
           description:
-            "Microsoft entered the browser market by licensing Mosaic code and bundling Internet Explorer with Windows. This move set the stage for fierce competition and the commercialization of browsers.",
-          image: "https://upload.wikimedia.org/wikipedia/en/3/30/Internet_Explorer_1_screenshot.png",
+            "Mosaic (Marc Andreessen & Eric Bina) popularized inline images, a simple GUI, and multi-platform support — making the web approachable to non-technical users and igniting public interest.",
+          image: "/ressources/Mosaic.png",
+        },
+        {
+          headline: "Netscape Navigator (1994) — Mainstream Adoption",
+          description:
+            "Originally released as 'Mosaic Netscape', Netscape Navigator introduced progressive rendering (text visible while images loaded) and a modern GUI that accelerated adoption on dial-up connections.",
+          image: "/ressources/Netscape.png",
+        },
+        {
+          headline: "Internet Explorer enters (1995)",
+          description:
+            "Microsoft bundled Internet Explorer with Windows 95 (initially via the Plus! pack), initiating the commercial competition that would become known as the 'browser wars'.",
+          image: "/ressources/InternetExplorer4.0.png",
+        },
+        {
+          headline: "Tim Berners-Lee & Early Principles",
+          description:
+            "The conceptual foundations laid by Tim Berners-Lee—open standards, URIs, and the idea of linked documents—underpinned these earliest browsers and the web’s growth.",
+          image: "/ressources/TimBernersLee.png",
         },
       ],
       visual_summary:
-        "Mostly plain HTML with inline images as the major new capability. Tiled backgrounds, simple icons, early GIF animations, and experimental layout choices dominated — the foundational, experimental phase of visual web design.",
+        "Simple HTML pages with inline images and emergent graphical UI patterns. This era established the basic visual vocabulary of the web.",
     },
+
     {
       title: "1995–2000",
       introduction:
-        "Between 1995 and 2000 the web matured rapidly as companies recognized its commercial potential. Two browsers — Netscape Navigator and Internet Explorer — battled fiercely for control. This was the era of “browser wars,” marked by speed races, proprietary features, and the lack of standardized web technologies. Microsoft aggressively bundled Internet Explorer with Windows, leading to its eventual dominance.\n\nTechnical innovation exploded, often chaotically. The introduction of CSS1 in 1996 began shifting visual control from HTML to stylesheets. Meanwhile, JavaScript evolved from a simple scripting language into something capable of animations, form validation, and rudimentary interactive components. Opera appeared in 1996, introducing features like tabbed browsing years before others.\n\nWebsites grew more complex as designers embraced tables, frames, and Flash. Commercial websites boomed, and the dot-com era shaped the aesthetic and expectations of the modern web.",
+        "1995–2000 was dominated by rapid browser innovation and fragmentation. Netscape and Microsoft fought for distribution and features, CSS was introduced (1996) to separate style from markup, and lightweight alternatives like Opera appeared. Plugins such as Flash extended what browsers could show before native APIs existed.",
       sections: [
         {
-          headline: "Internet Explorer 3–5 — Microsoft's Takeover (1996–1999)",
+          headline: "The Browser Wars Intensify",
           description:
-            "Internet Explorer added CSS support, scripting enhancements, and deep Windows integration. Microsoft’s strategy of bundling IE with Windows helped it quickly capture market share and set the tone for the late-1990s web.",
-          image: "https://upload.wikimedia.org/wikipedia/en/7/7d/Internet_Explorer_5_screenshot.png",
+            "Netscape and Microsoft competed on features and distribution. Microsoft's strategy of bundling IE with Windows dramatically shifted market share and developer behavior.",
+          image: "/ressources/BrowserWars.png",
         },
         {
-          headline: "Netscape Navigator 3–4 — Innovation & Decline",
+          headline: "Netscape Communicator & Open-Sourcing (1998)",
           description:
-            "Netscape introduced early JavaScript and a plugin architecture, but development slowed as Microsoft invested heavily in IE. Netscape’s struggles highlighted the risks of rapid commercial competition in standards-driven platforms.",
-          image: "https://upload.wikimedia.org/wikipedia/en/d/d1/Netscape_Communicator_4_Screenshot.png",
+            "Netscape released Communicator and later open-sourced its code in 1998, creating the Mozilla Project — a foundational move toward open-source browser engines and future standards-focused browsers.",
+          image: "/ressources/Netscape6.png",
         },
         {
-          headline: "CSS1 (1996) — Visual Control Arrives",
+          headline: "CSS1 (1996) — Styling Arrives",
           description:
-            "CSS1 allowed designers to separate presentation from structure for the first time, introducing a path toward more consistent cross-browser styling — although adoption and implementation varied greatly across browsers.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/8/81/Cascading_Style_Sheets_logo.svg",
+            "CSS1 introduced stylesheet-based control of fonts, colors, and spacing for the first time — the first step toward modern layout and visual design separation.",
+          image: "/ressources/HTML5.png",
         },
         {
-          headline: "Flash & Plugin Era",
+          headline: "Opera — Lightweight Innovation",
           description:
-            "Flash and browser plugins enabled animation, multimedia, and rich interactivity before HTML5's capabilities existed. Sites used Flash for entire interactive experiences, but at the cost of accessibility and performance.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Adobe_Flash_Player_v11_icon.png",
+            "Opera prioritized efficiency and accessibility, introducing early innovations that would later appear more broadly (keyboard navigation, small footprint, early multi-document ideas).",
+          image: "/ressources/Opera2.0.png",
+        },
+        {
+          headline: "Flash and Plugins Era",
+          description:
+            "Developers relied on plugins like Flash and Shockwave for animations and rich content long before comparable native APIs were available.",
+          image:
+            "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=1600&q=80",
+        },
+        {
+          headline: "Market Shifts (late 1990s)",
+          description:
+            "By the late 1990s Netscape’s market share fell as Internet Explorer (especially IE5) grew through OS integration, causing developers to optimize sites for IE-specific features.",
+          image: "/ressources/ChromewinsoverIE.png",
         },
       ],
       visual_summary:
-        "Designs became dense and busy: table-based layouts, framesets, Flash splash pages, animated banners, and heavy ornamentation were common. The web looked commercially flashy and often overwrought.",
+        "Busy, commercial designs — table-based layouts, frames, animated banners and Flash-heavy homepages typified the era.",
     },
+
     {
       title: "2000–2005",
       introduction:
-        "The early 2000s were defined by stability issues in Internet Explorer and the emergence of strong competitors. IE6 dominated globally but was plagued with security flaws and inconsistent standards support. This stability gap motivated developers to create alternatives.\n\nThe Mozilla Foundation released Firefox 1.0 in 2004, quickly gaining attention for tabbed browsing, extensions, and better standards compliance. Safari launched on macOS in 2003, ending Microsoft’s presence on Mac systems. Meanwhile, developers expanded their capabilities with CSS2 which introduced positioning, z-index, and advanced layout control.\n\nThe most transformative development of this era was the arrival of AJAX, enabling asynchronous web apps like Gmail and Google Maps. The modern interactive web was born as pages began to behave more like applications than static documents.",
+        "2000–2005 was a consolidation period. Internet Explorer 6 dominated but struggled with security and standards; Mozilla and Firefox rose as an alternative; Safari entered the market with WebKit; and AJAX emerged to enable richer, application-like experiences.",
       sections: [
         {
-          headline: "Internet Explorer 6 (2001)",
+          headline: "Netscape 6 & Mozilla Beginnings",
           description:
-            "IE6 achieved massive market share but was criticized for security and poor standards compatibility. Its dominance slowed overall progress toward consistent rendering and modern features until other browsers forced change.",
-          image: "https://upload.wikimedia.org/wikipedia/en/2/2f/Internet_Explorer_6_SP2.png",
+            "Netscape attempted a restart with Netscape 6 (early Mozilla-based builds) but faced performance criticisms. Concurrently, the Mozilla project matured toward future browsers.",
+          image: "/ressources/Netscape6.png",
         },
         {
-          headline: "Firefox 1.0 (2004)",
+          headline: "Internet Explorer 6 (2001) — Widespread Adoption",
           description:
-            "Firefox brought tabbed browsing, a powerful extension ecosystem, and a renewed focus on standards compliance. It revitalized browser competition and pushed vendors to improve speed and compatibility.",
-          image: "https://upload.wikimedia.org/wikipedia/en/6/66/Firefox_screenshot.png",
+            "IE6 shipped with Windows XP and became ubiquitous. Its security flaws and inconsistent standards support would hinder cross-browser progress for years.",
+          image: "/ressources/IE6.png",
         },
         {
-          headline: "Safari 1 (2003)",
+          headline: "Mozilla / Firefox (2002–2004)",
           description:
-            "Apple's Safari introduced WebKit to the desktop, offering good performance on macOS and later inspiring other projects. WebKit’s evolution would later become central to mobile browser engines.",
-          image: "https://upload.wikimedia.org/wikipedia/en/5/58/Safari_1_0_screenshot.png",
+            "Mozilla 1.0 and then Firefox 1.0 emerged as viable, standards-focused alternatives — lighter, faster, and with a growing community of users and add-ons.",
+          image: "/ressources/MozillaFirefox.png",
         },
         {
-          headline: "AJAX (2004–2005)",
+          headline: "Safari & WebKit (2003)",
           description:
-            "AJAX techniques allowed asynchronous requests and partial page updates, enabling web apps that behaved like desktop software — a major turning point for interactivity and usability.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Ajax-loader.gif",
+            "Apple introduced Safari and the WebKit engine, which later influenced mobile browser architectures and the development of other engines.",
+          image: "/ressources/Safari.png",
+        },
+        {
+          headline: "AJAX & Dynamic Interfaces",
+          description:
+            "AJAX techniques allowed partial page updates and asynchronous requests, catalyzing the move from static pages to interactive web applications.",
+          image: "/ressources/crossplatformImprovements.png",
+        },
+        {
+          headline: "Opera Continues (2005)",
+          description:
+            "Opera 8 and subsequent releases improved security and tabbed browsing while adding integrated utilities like email and improved UX.",
+          image: "/ressources/Opera8.png",
         },
       ],
       visual_summary:
-        "Web 2.0 aesthetics begin to appear: glossy buttons, rounded corners, drop shadows, and fixed-width grid layouts (the 960px era). Interfaces became smoother and more application-like.",
+        "The Web 2.0 seeds: richer UIs, app-like interfaces, and an increasing split between content structure and presentation.",
     },
+
     {
       title: "2005–2010",
       introduction:
-        "This period is one of the most transformative in browser history. In 2008, Google released Chrome, introducing the V8 JavaScript engine — the fastest of its time — and a minimalist UI that influenced every major browser afterward. Firefox and Safari improved significantly, and Microsoft attempted to recover with IE7 and IE8.\n\nDevelopers gained access to early HTML5 and CSS3 features, while AJAX went mainstream. Browser vendors started competing on speed, standards support, and security rather than proprietary features. The first modern JavaScript frameworks emerged, and interactive web apps became normal.",
+        "2005–2010 saw Chrome’s arrival (2008) and the accelerating decline of plugin reliance. HTML5 and CSS3 began to expose native multimedia and graphics capabilities, while developer tools and performance profiling matured.",
       sections: [
         {
-          headline: "Google Chrome (2008)",
+          headline: "Google Chrome (2008) — Performance & Minimalism",
           description:
-            "Chrome introduced a speedy V8 JavaScript engine, process isolation for tabs, and a minimal UI that emphasized page content. It reset expectations for performance and stability and quickly influenced other browsers' designs.",
-          image: "https://upload.wikimedia.org/wikipedia/en/7/70/Google_Chrome_screenshot.png",
+            "Chrome introduced a minimal UI, multiprocess architecture, and the V8 JavaScript engine — raising expectations for speed, stability, and developer tooling.",
+          image: "/ressources/Chrome.png",
         },
         {
-          headline: "Firefox 2–3",
+          headline: "Firefox Growth & Extensions",
           description:
-            "Firefox continued improving performance and the add-on ecosystem. It became the favorite of many developers for its debugging tools and standards push.",
-          image: "https://upload.wikimedia.org/wikipedia/en/6/66/Firefox-logo.png",
+            "Firefox enhanced its add-on ecosystem and developer tools, positioning itself as a powerful, customizable alternative for developers and privacy-minded users.",
+          image: "/ressources/Firefox2.png",
         },
         {
-          headline: "HTML5 & CSS3 Begin",
+          headline: "HTML5 & CSS3 Begin to Replace Plugins",
           description:
-            "New APIs (audio/video/canvas) and CSS3 styling primitives (transforms, border-radius) reduced reliance on plugins and enabled richer media and visuals in native HTML.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+            "Native APIs for audio, video, and canvas reduced the need for Flash, while CSS3 introduced richer styling capabilities and transitions.",
+          image: "/ressources/HTML5.png",
         },
         {
-          headline: "DevTools Mature",
+          headline: "DevTools & Performance Culture",
           description:
-            "Chrome DevTools revolutionized front-end development with built-in profiling, inspection, and debugging features — making developer workflows far more efficient.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Chrome_DevTools.png/640px-Chrome_DevTools.png",
+            "Built-in developer tools and performance measurement became essential for web teams, influencing code and design decisions for faster, more responsive sites.",
+          image: "/ressources/ChromeV100.png",
+        },
+        {
+          headline: "Mobile Seedlings — iPhone Influence",
+          description:
+            "Smartphones and the mobile web (accelerated by the iPhone) began to push designers toward simpler, touch-friendly interfaces.",
+          image: "/ressources/MobileSafari.png",
         },
       ],
       visual_summary:
-        "The start of responsive thinking, cleaner layouts, and grid-based systems. Designs moved away from heavy ornament toward clarity and content focus; Flash usage declined.",
+        "Cleaner layouts and the first responsive ideas. Designers favored usability and content over ornamentation.",
     },
+
     {
       title: "2010–2015",
       introduction:
-        "The rise of smartphones and tablets reshaped browser development. Chrome skyrocketed in popularity, Firefox iterated quickly, and Microsoft replaced Internet Explorer with Edge. HTML5 & CSS3 matured, and JavaScript engines became dramatically faster.\n\nFrameworks like AngularJS, Backbone, and jQuery dominated. Responsive design became essential after the iPhone’s success. Browsers focused heavily on security, standards, and developer tools.",
+        "The mobile era reshaped priorities between 2010 and 2015. Responsive design went mainstream, Chrome’s rapid release cadence accelerated feature delivery, and Microsoft started modernizing IE before launching Edge.",
       sections: [
         {
-          headline: "Chrome 10–40 (2011–2015)",
+          headline: "Mobile Browsing & Responsive Design (2010+)",
           description:
-            "Chrome adopted a rapid-release cadence and continued to push JavaScript performance and modern web APIs, solidifying its market leadership.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.png",
+            "Mobile traffic growth made flexible, fluid layouts essential. Media queries and mobile-first approaches became standard practice.",
+          image: "/ressources/MobileSafari.png",
         },
         {
-          headline: "Internet Explorer 9–11 → Microsoft Edge",
+          headline: "Chrome Rapid Release & Ecosystem",
           description:
-            "Microsoft moved toward modern standards with IE9–11 and eventually introduced Edge as a successor. This period marked Microsoft’s attempt to recover from legacy compatibility issues.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Edge_2015_Logo.svg",
+            "Chrome’s frequent updates and broad API support helped cement its position and pushed the web platform forward faster than previously possible.",
+          image: "/ressources/ChromeV100.png",
         },
         {
-          headline: "CSS3 Full Maturity",
+          headline: "Firefox Quantum (roots & work)",
           description:
-            "CSS3 features like transitions, animations, Flexbox, and better typography controls became widely supported, enabling richer, more responsive UIs.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+            "Work leading to Firefox Quantum focused on parallelization and performance (Servo, Stylo), aiming to reduce memory usage and improve rendering speed.",
+          image: "/ressources/FirefoxQuantum.png",
         },
         {
-          headline: "Rise of Mobile Browsing",
+          headline: "Microsoft Moves Toward Edge",
           description:
-            "Mobile usage overtook desktop in many contexts, making responsive design the norm and forcing designers to prioritize adaptable layouts and touch-friendly controls.",
-          image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+            "Microsoft released IE9–11 with incremental improvements and then introduced Edge (EdgeHTML) with Windows 10 as a fresh start for standards and performance.",
+          image: "/ressources/Edge.png",
+        },
+        {
+          headline: "HTML5 Matures",
+          description:
+            "HTML5 gained broad support across major browsers; features like video and canvas were widely used in production sites.",
+          image: "/ressources/HTML5.png",
         },
       ],
       visual_summary:
-        "Flat design and mobile-first layouts dominate. Typography and spacing become central; skeuomorphism fades in favor of clear, minimal interfaces.",
+        "Flat design, large type, and spacing dominated; interfaces became touch-friendly and clarity-focused.",
     },
+
     {
       title: "2015–2020",
       introduction:
-        "Browsers stabilized around shared standards. Chrome dominated, Firefox reinvented itself, Safari optimized battery usage, and Microsoft Edge migrated to Chromium. This was a golden era for performance improvements and new web capabilities.\n\nProgressive Web Apps (PWAs) blurred the line between websites and apps. WebAssembly enabled near-native execution speeds. CSS Grid revolutionized layout design. Privacy concerns became a driving force, with tracking protection and sandboxing.",
+        "2015–2020 centered on standardization and platform parity: PWAs, WebAssembly, CSS Grid, and stronger privacy and performance features. Microsoft rebuilt Edge on Chromium to regain compatibility and performance.",
       sections: [
         {
-          headline: "Edge Chromium (2019)",
+          headline: "Edge Rebuilt on Chromium (2018–2020)",
           description:
-            "Microsoft rebuilt Edge on Chromium, joining the Chromium ecosystem to benefit from its performance, compatibility, and development tooling while contributing to the common platform.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Microsoft_Edge_logo_%282019%29.svg",
+            "Microsoft announced and released the Chromium-based Edge, aligning its browser with Chromium’s rendering and compatibility advantages.",
+          image: "/ressources/newEdge.png",
         },
         {
-          headline: "WebAssembly (2017)",
+          headline: "Progressive Web Apps & Offline-first",
           description:
-            "WebAssembly opened the browser to compiled languages, enabling high-performance applications (e.g., games, CAD, image processing) to run in the browser with near-native speeds.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg",
+            "PWAs added installability, offline support, and native-like behavior to websites, narrowing the gap between web and native applications.",
+          image:
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80",
         },
         {
-          headline: "Progressive Web Apps",
+          headline: "WebAssembly — Near-Native Performance",
           description:
-            "PWAs provided installability, offline support, and native-like behavior without an app store, blurring the boundary between web and native apps.",
-          image: "https://https://upload.wikimedia.org/wikipedia/commons/a/a0/PWA_logo.svg",
+            "WebAssembly enabled compute-heavy applications (games, editors, scientific code) to run in the browser with near-native speed.",
+          image:
+            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1600&q=80",
         },
         {
-          headline: "CSS Grid (2017)",
+          headline: "Privacy & Alternative Search",
           description:
-            "CSS Grid gave designers two-dimensional layout power in CSS, simplifying complex responsive layouts and reducing reliance on hacks and frameworks.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/CSS_Grid_Layout_Logo.svg",
+            "Privacy-focused tools and search providers (DuckDuckGo, Ecosia) and enhanced tracker protections became more prominent in browser offerings.",
+          image: "/ressources/duckduckgo.png",
+        },
+        {
+          headline: "Ecosystem Tools & Frameworks",
+          description:
+            "Modern frameworks (Angular, React, Vue) and tooling ecosystems matured, enabling large-scale single-page applications and improved developer workflows.",
+          image: "/ressources/Angular2.0.png",
         },
       ],
       visual_summary:
-        "Dark mode, minimalist app-like interfaces, big typography, and grid-based responsive systems. Design increasingly mirrors native app conventions and emphasizes accessibility and performance.",
+        "Design balanced performance with polish: grid systems, accessibility-first layouts, dark modes, and fluid components became standard.",
     },
+
     {
       title: "2020–2025",
       introduction:
-        "The last five years have seen browser development accelerate through automation, AI, and GPU-powered rendering. Chrome, Safari, Firefox, and Edge compete vigorously on privacy, speed, and advanced APIs. Browsers integrate machine learning for tasks like tab management, content assistance, and performance optimization.\n\nWith WebGPU and WebAssembly maturing, browsers are now powerful platforms for 3D rendering, gaming, scientific computing, and AI inference. Lightweight UI, accessibility standards, and performance-oriented design dominate.",
+        "From 2020 through 2025, browsers focused on performance, privacy, and new platform APIs. WebGPU introduced modern GPU access, AI-assisted features appeared in multiple browsers, and privacy protections and rapid release cycles continued to shape the platform.",
       sections: [
         {
-          headline: "WebGPU (2023)",
+          headline: "WebGPU & High-Performance Graphics",
           description:
-            "WebGPU is a next-generation graphics and compute API for the web, enabling high-performance 3D graphics and GPU compute workloads in the browser and unlocking new classes of applications.",
-          image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/WebGPU_logo.png",
+            "WebGPU brought modern GPU access to the web for 3D rendering and parallel compute tasks, expanding the browser’s suitability for games, visualization, and ML workloads.",
+          image: "/ressources/crossplatformImprovements.png",
         },
         {
-          headline: "Privacy Defaults Strengthen",
+          headline: "AI-Assisted Browsing (2022–2024)",
           description:
-            "Browsers implemented stronger tracking prevention, sandboxing, and isolation mechanisms. Privacy became a first-class feature as users and regulators demanded better defaults.",
-          image: "https://images.unsplash.com/photo-1526378722448-4e0c47e82d47",
+            "Major browsers integrated or experimented with AI features — in-browser summarization, chat assistants, writing tools, and tab organization — often via partnerships between browser vendors and AI services.",
+          image: "/ressources/AiAssistedBrowsingEdge.png",
         },
         {
-          headline: "AI-integrated Browsers",
+          headline: "Privacy & Tracker Protections",
           description:
-            "AI features such as smart search, tab grouping, auto-summarization, and assistive features began appearing in or alongside browsers, improving productivity and content interaction.",
-          image: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2",
+            "Browsers strengthened tracking protections (ITP, Total Cookie Protection, DNS-over-HTTPS) and privacy-minded browsers like Brave and DuckDuckGo grew in visibility.",
+          image: "/ressources/Ecosia.png",
         },
         {
-          headline: "Fast Release Cycles",
+          headline: "Chromium Dominance & Engine Consolidation",
           description:
-            "Browsers adopted aggressive release cadences (often monthly), enabling rapid iteration and faster delivery of features, security fixes, and API improvements.",
-          image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+            "Chromium-based browsers (Chrome, new Edge, Brave, Opera variants) became dominant across platforms, while independent engine development (e.g., EdgeHTML) receded.",
+          image: "/ressources/AllBrowsers.png",
+        },
+        {
+          headline: "Green Browsing & New Niche Projects",
+          description:
+            "New browser projects and initiatives emphasized privacy, sustainability, or niche goals (e.g., tree-planting search partnerships and low-energy modes).",
+          image: "/ressources/NoMoreIE.png",
         },
       ],
       visual_summary:
-        "Accessible-by-default design, fluid design systems, dark/light theme syncing, subtle animations and micro-interactions, and clean, content-centered layouts. Visuals balance performance with richness and inclusivity.",
+        "Modern, accessible-by-default design with theme syncing, subtle micro-interactions, and a balance of visual richness and performance.",
     },
   ],
 };
 
+
+
+
+
 const TIMEFRAMES = CONTENT.timeframes.map((t) => t.title);
+
+// animation variants for content landing page
+const listVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.06 } },
+};
+const itemVariants = {
+  hidden: { opacity: 0, y: 16, scale: 0.99 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 320, damping: 32 } },
+};
+const heroVariants = { hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.45 } } };
 
 const PALETTE = [
   "#ef4444",
@@ -252,6 +341,19 @@ const PALETTE = [
   "#34d399",
   "#7c3aed",
 ];
+
+/*
+// assign placeholder image paths (user will drop images into /assets/images/...)
+(function assignPlaceholders() {
+  const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  CONTENT.timeframes.forEach((tf) => {
+    const slug = slugify(tf.title);
+    tf.sections.forEach((s, i) => {
+      s.image = `/assets/images/${slug}-${i + 1}.jpg`;
+    });
+  });
+})();
+*/
 
 export default function BrowserTimeline() {
   const containerRef = useRef(null);
@@ -466,40 +568,74 @@ export default function BrowserTimeline() {
             >
               {/* NOTE: this inner div is the actual scrollable area. we attach contentScrollRef to it. */}
               <div ref={contentScrollRef} onMouseEnter={() => setIsHoveringTimeline(false)} className="mx-12 p-8 max-h-[80vh] overflow-auto">
-                <button
-                  className="mb-6 px-3 py-1 border rounded text-sm text-white bg-white/20 hover:bg-white/30"
-                  onClick={closePanel}
-                >
-                  Close
-                </button>
-
-                <div className="space-y-6">
-                  <h2 className="text-4xl font-semibold text-emerald-200">
-                    {selectedGroup != null ? TIMEFRAMES[selectedGroup] : ""}
-                  </h2>
-                  <p className="text-lg text-white/80 leading-relaxed">
-                    {selectedGroup != null ? CONTENT.timeframes[selectedGroup].introduction : ""}
-                  </p>
-
-                  <div className="space-y-4">
-                    {selectedGroup != null &&
-                      CONTENT.timeframes[selectedGroup].sections.map((s, i) => (
-                        <div key={i} className="flex gap-4 items-start p-4 rounded-lg bg-white/5">
-                          <img src={s.image} alt="" className="w-28 h-20 object-cover rounded" />
-                          <div>
-                            <h3 className="font-medium">{s.headline}</h3>
-                            <p className="text-sm text-white/70">{s.description}</p>
-                          </div>
-                        </div>
-                      ))}
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex-1">
+                    <h1 className="text-5xl font-extrabold text-emerald-200 tracking-tight">{selectedGroup != null ? TIMEFRAMES[selectedGroup] : "A visual history of browsers"}</h1>
+                    <p className="mt-3 text-lg text-white/80 max-w-2xl">
+                      {selectedGroup != null ? CONTENT.timeframes[selectedGroup].introduction : "Explore the major eras of web browsers — from early GUI experiments to modern GPU-powered web platforms. Click any item on the timeline to jump to a focused article."}
+                    </p>
                   </div>
 
-                  {selectedGroup != null && (
-                    <div className="mt-4 p-4 rounded bg-white/6">
-                      <strong className="block mb-1">Visual summary</strong>
-                      <p className="text-sm text-white/80">{CONTENT.timeframes[selectedGroup].visual_summary}</p>
+                  <div className="ml-6 flex-shrink-0 flex items-center gap-3">
+                    <button
+                      className="px-4 py-2 rounded-md text-sm font-medium bg-white/20 text-white hover:bg-white/30"
+                      onClick={closePanel}
+                    >
+                      Close
+                    </button>
+                    {selectedGroup == null && (
+                      <button
+                        className="px-4 py-2 rounded-md text-sm font-medium bg-white/6 text-white/80 hover:bg-white/10"
+                        onClick={() => { /* show all - nothing to do */ }}
+                      >
+                        View timeline
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+
+                {/* Articlescdcd area */}
+                <div className="space-y-8">
+                  {/* If no group selected, show teaser cards for each timeframe */}
+                  {selectedGroup == null ? (
+                    <div className="grid grid-cols-1 gap-6">
+                      {CONTENT.timeframes.map((tf, i) => (
+                        <article key={i} className="p-6 rounded-lg bg-white/5 hover:bg-white/6 transition cursor-pointer" onClick={() => { scrollToGroup(i); setSelectedGroup(i); setIsOpen(true); }}>
+                          <div className="flex items-start gap-4">
+                            <div className="w-16 h-16 rounded-md flex items-center justify-center bg-white/10 text-2xl font-bold" style={{background: PALETTE[i % PALETTE.length]}}>
+                              {i+1}
+                            </div>
+                            <div>
+                              <h3 className="text-xl font-semibold">{tf.title}</h3>
+                              <p className="mt-2 text-sm text-white/70 max-w-3xl">{tf.introduction.slice(0, 220)}{tf.introduction.length > 220 ? '…' : ''}</p>
+                            </div>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  ) : (
+                    // show the selected group's articles as single-article sections
+                    <div className="space-y-6">
+                      {CONTENT.timeframes[selectedGroup].sections.map((s, idx) => (
+                        <article key={idx} className="grid grid-cols-3 gap-6 items-start p-6 rounded-lg bg-white/4">
+                          <img src={s.image} alt="" className="col-span-1 w-full h-40 object-cover rounded-md" />
+                          <div className="col-span-2">
+                            <h3 className="text-2xl font-semibold">{s.headline}</h3>
+                            <p className="mt-2 text-sm text-white/80">{s.description}</p>
+                          </div>
+                        </article>
+                      ))}
                     </div>
                   )}
+
+                  {/* Final summary block */}
+                  <motion.div variants={itemVariants} initial="hidden" animate={"show"} className="mt-6 p-6 rounded-lg bg-white/5">
+                    <h4 className="text-lg font-semibold">Summary</h4>
+                    <p className="mt-2 text-sm text-white/80">
+                      {selectedGroup != null ? CONTENT.timeframes[selectedGroup].visual_summary : "This timeline highlights major browser eras. Click into any era to read a short article, or use the timeline to browse visually."}
+                    </p>
+                  </motion.div>
                 </div>
               </div>
             </motion.aside>
