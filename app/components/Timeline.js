@@ -367,6 +367,10 @@ export default function BrowserTimeline() {
   const [isOpen, setIsOpen] = useState(false);
   const [vw, setVw] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
 
+  useEffect(() => {
+  setIsHoveringTimeline(true); // enable timeline scroll on first load
+}, []);
+
   // Layout constants
   const BOXES_PER_GROUP = 5; // user requested 5 boxes per timeframe
   const BOX_HEIGHT = 40; // px (outer container height - keeps distances constant)
@@ -554,6 +558,13 @@ export default function BrowserTimeline() {
 
   return (
     <div className="h-screen w-screen bg-black text-white overflow-hidden font-sans">
+      {!isOpen && (
+  <div className="absolute left-0 top-0 bottom-0 w-1/3 flex items-center p-12 pointer-events-none">
+    <h1 className="text-6xl font-extrabold text-white leading-tight">
+      Browsers<br />across Time
+    </h1>
+  </div>
+)}
       <div className="h-full flex items-center justify-center relative">
         {/* LEFT content panel */}
         <AnimatePresence>
