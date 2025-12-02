@@ -9,12 +9,12 @@ const CONTENT = {
     {
       title: "1990–1995",
       introduction:
-        "Between 1990 and 1995 the web moved from CERN research project to the first public, visual network. Tim Berners-Lee created the first browser/editor (WorldWideWeb — later Nexus), and simple text-mode clients (Line Mode Browser, LYNX) made the web accessible on a wide range of terminals. The watershed moment arrived in 1993 with NCSA Mosaic, the first broadly popular graphical browser; in 1994 Netscape Navigator followed and in 1995 Microsoft shipped Internet Explorer, launching the first intense era of browser competition.",
+        "Between 1990 and 1995 the web moved from CERN research project to the first public, visual network. Tim Berners-Lee created the first browser/editor (WorldWideWeb - later Nexus), and simple text-mode clients (Line Mode Browser, LYNX) made the web accessible on a wide range of terminals. The watershed moment arrived in 1993 with NCSA Mosaic, the first broadly popular graphical browser; in 1994 Netscape Navigator followed and in 1995 Microsoft shipped Internet Explorer, launching the first intense era of browser competition.",
       sections: [
         {
           headline: "WorldWideWeb / Nexus (1990)",
           description:
-            "Tim Berners-Lee’s original browser and editor for the NeXT workstation allowed users not only to view but also to edit pages — a defining early design for the web as a read/write medium. It introduced fundamental concepts like hyperlinks, URLs, and basic styling. Although primitive, the application defined the interaction model that all later browsers would refine.",
+            "Tim Berners-Lee’s original browser and editor for the NeXT workstation allowed users not only to view but also to edit pages - a defining early design for the web as a read/write medium. It introduced fundamental concepts like hyperlinks, URLs, and basic styling. Although primitive, the application defined the interaction model that all later browsers would refine.",
           image: "/ressources/worldwideweb.png",
         },
         {
@@ -30,13 +30,13 @@ const CONTENT = {
           image: "/ressources/LYNX.png",
         },
         {
-          headline: "NCSA Mosaic (1993) — Graphical Browsing",
+          headline: "NCSA Mosaic (1993) - Graphical Browsing",
           description:
-            "Mosaic (Marc Andreessen & Eric Bina) popularized inline images, a simple GUI, and multi-platform support — making the web approachable to non-technical users and igniting public interest. It unified text and images in a single window, which was revolutionary at the time. Mosaic’s intuitive interface became the template for all graphical browsers that followed.",
+            "Mosaic (Marc Andreessen & Eric Bina) popularized inline images, a simple GUI, and multi-platform support - making the web approachable to non-technical users and igniting public interest. It unified text and images in a single window, which was revolutionary at the time. Mosaic’s intuitive interface became the template for all graphical browsers that followed.",
           image: "/ressources/Mosaic.png",
         },
         {
-          headline: "Netscape Navigator (1994) — Mainstream Adoption",
+          headline: "Netscape Navigator (1994) - Mainstream Adoption",
           description:
             "Originally released as 'Mosaic Netscape', Netscape Navigator introduced progressive rendering (text visible while images loaded) and a modern GUI that accelerated adoption on dial-up connections. Its speed and reliability quickly won over users, helping the web expand beyond academic and technical circles. Navigator soon became the dominant browser of the mid-1990s.",
           image: "/ressources/Netscape.png",
@@ -50,7 +50,7 @@ const CONTENT = {
         {
           headline: "Tim Berners-Lee & Early Principles",
           description:
-            "The conceptual foundations laid by Tim Berners-Lee—open standards, URIs, and the idea of linked documents—underpinned these earliest browsers and the web’s growth. His vision of a decentralized, interoperable information system shaped the culture of early web development. Even as commercial interests grew, these principles influenced key web standards.",
+            "The conceptual foundations laid by Tim Berners-Lee-open standards, URIs, and the idea of linked documents-underpinned these earliest browsers and the web’s growth. His vision of a decentralized, interoperable information system shaped the culture of early web development. Even as commercial interests grew, these principles influenced key web standards.",
           image: "/ressources/TimBernersLee.png",
         },
       ],
@@ -72,17 +72,17 @@ const CONTENT = {
         {
           headline: "Netscape Communicator & Open-Sourcing (1998)",
           description:
-            "Netscape released Communicator and later open-sourced its code in 1998, creating the Mozilla Project — a foundational move toward open-source browser engines and future standards-focused browsers. Though Communicator struggled with stability, the open-source transition sowed the seeds for Firefox. It also helped rally the developer community around open standards.",
+            "Netscape released Communicator and later open-sourced its code in 1998, creating the Mozilla Project - a foundational move toward open-source browser engines and future standards-focused browsers. Though Communicator struggled with stability, the open-source transition sowed the seeds for Firefox. It also helped rally the developer community around open standards.",
           image: "/ressources/Netscape6.png",
         },
         {
-          headline: "CSS1 (1996) — Styling Arrives",
+          headline: "CSS1 (1996) - Styling Arrives",
           description:
-            "CSS1 introduced stylesheet-based control of fonts, colors, and spacing for the first time — the first step toward modern layout and visual design separation. This shifted visual decisions away from HTML tags and toward reusable styles. It also marked the beginning of serious attempts to standardize browser rendering.",
+            "CSS1 introduced stylesheet-based control of fonts, colors, and spacing for the first time - the first step toward modern layout and visual design separation. This shifted visual decisions away from HTML tags and toward reusable styles. It also marked the beginning of serious attempts to standardize browser rendering.",
           image: "/ressources/HTML5.png",
         },
         {
-          headline: "Opera — Lightweight Innovation",
+          headline: "Opera - Lightweight Innovation",
           description:
             "Opera prioritized efficiency and accessibility, introducing early innovations that would later appear more broadly (keyboard navigation, small footprint, early multi-document ideas). Its alternative design philosophy appealed to power users and those on limited hardware. Opera’s influence later surfaced in tabbed browsing and mobile interfaces.",
           image: "/ressources/Opera2.0.png",
@@ -117,15 +117,15 @@ const CONTENT = {
           image: "/ressources/Netscape6.png",
         },
         {
-          headline: "Internet Explorer 6 (2001) — Widespread Adoption",
+          headline: "Internet Explorer 6 (2001) - Widespread Adoption",
           description:
             "IE6 shipped with Windows XP and became ubiquitous. Its security flaws and inconsistent standards support would hinder cross-browser progress for years. The dominance of IE6 effectively stalled many web innovations until competitors re-emerged.",
           image: "/ressources/IE6.png",
         },
         {
-          headline: "Mozilla / Firefox (2002–2004)",
+          headline: "Mozilla / Firefox (2002-2004)",
           description:
-            "Mozilla 1.0 and then Firefox 1.0 emerged as viable, standards-focused alternatives — lighter, faster, and with a growing community of users and add-ons. Firefox’s commitment to web standards inspired developers frustrated with IE’s stagnation. It soon became the browser of choice for early adopters.",
+            "Mozilla 1.0 and then Firefox 1.0 emerged as viable, standards-focused alternatives - lighter, faster, and with a growing community of users and add-ons. Firefox’s commitment to web standards inspired developers frustrated with IE’s stagnation. It soon became the browser of choice for early adopters.",
           image: "/ressources/MozillaFirefox.png",
         },
         {
@@ -148,7 +148,7 @@ const CONTENT = {
         },
       ],
       visual_summary:
-        "Visual design began to mature as browsers stabilized and CSS adoption grew. Designers moved away from heavy table layouts toward cleaner, more structured pages with clearer hierarchy. Gradients, soft shadows, and gloss effects emerged as early markers of the Web 2.0 aesthetic. Standardized navigation bars, rounded corners, and more consistent grid-like layouts gained popularity. AJAX introduced dynamic interactions that changed how pages behaved visually, allowing content to update without a full page refresh — a major step toward app-like visuals.",
+        "Visual design began to mature as browsers stabilized and CSS adoption grew. Designers moved away from heavy table layouts toward cleaner, more structured pages with clearer hierarchy. Gradients, soft shadows, and gloss effects emerged as early markers of the Web 2.0 aesthetic. Standardized navigation bars, rounded corners, and more consistent grid-like layouts gained popularity. AJAX introduced dynamic interactions that changed how pages behaved visually, allowing content to update without a full page refresh - a major step toward app-like visuals.",
     },
 
     {
@@ -157,9 +157,9 @@ const CONTENT = {
         "2005–2010 saw Chrome’s arrival (2008) and the accelerating decline of plugin reliance. HTML5 and CSS3 began to expose native multimedia and graphics capabilities, while developer tools and performance profiling matured.",
       sections: [
         {
-          headline: "Google Chrome (2008) — Performance & Minimalism",
+          headline: "Google Chrome (2008) - Performance & Minimalism",
           description:
-            "Chrome introduced a minimal UI, multiprocess architecture, and the V8 JavaScript engine — raising expectations for speed, stability, and developer tooling. Its rapid release cycle contrasted sharply with slower competitors. Chrome quickly set new standards for how modern browsers should behave.",
+            "Chrome introduced a minimal UI, multiprocess architecture, and the V8 JavaScript engine - raising expectations for speed, stability, and developer tooling. Its rapid release cycle contrasted sharply with slower competitors. Chrome quickly set new standards for how modern browsers should behave.",
           image: "/ressources/Chrome.png",
         },
         {
@@ -181,7 +181,7 @@ const CONTENT = {
           image: "/ressources/ChromeV100.png",
         },
         {
-          headline: "Mobile Seedlings — iPhone Influence",
+          headline: "Mobile Seedlings - iPhone Influence",
           description:
             "Smartphones and the mobile web (accelerated by the iPhone) began to push designers toward simpler, touch-friendly interfaces. This shift laid the groundwork for later responsive design philosophies. Browsers were forced to adapt to much smaller screens and new interaction paradigms.",
           image: "/ressources/MobileSafari.png",
@@ -228,7 +228,7 @@ const CONTENT = {
         },
       ],
       visual_summary:
-        "The rise of mobile browsing forced websites to rethink visuals entirely. Designs adopted fluid grids, mobile-first workflows, and flexible components to work on every screen size. Flat design replaced skeuomorphic textures — shadows, bevels, and glossy buttons gave way to solid colors, thin typography, and simplified iconography. Visual identity became more systematic, emphasizing readability, spacing, and touch-friendly UI elements. This was a turning point where consistency, adaptability, and performance became defining visual priorities.",
+        "The rise of mobile browsing forced websites to rethink visuals entirely. Designs adopted fluid grids, mobile-first workflows, and flexible components to work on every screen size. Flat design replaced skeuomorphic textures - shadows, bevels, and glossy buttons gave way to solid colors, thin typography, and simplified iconography. Visual identity became more systematic, emphasizing readability, spacing, and touch-friendly UI elements. This was a turning point where consistency, adaptability, and performance became defining visual priorities.",
     },
 
     {
@@ -250,7 +250,7 @@ const CONTENT = {
             "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80",
         },
         {
-          headline: "WebAssembly — Near-Native Performance",
+          headline: "WebAssembly - Near-Native Performance",
           description:
             "WebAssembly enabled compute-heavy applications (games, editors, scientific code) to run in the browser with near-native speed. Projects like AutoCAD, Unity, and Figma embraced it to deliver rich experiences. WebAssembly broadened the browser's role as an application runtime.",
           image:
@@ -270,7 +270,7 @@ const CONTENT = {
         },
       ],
       visual_summary:
-        "Web design matured into a highly polished, grid-based, accessibility-aware discipline. CSS Grid and Flexbox enabled layouts that were once impossible without hacks. Dark mode became mainstream, bringing dual-theme design systems. Visuals became influenced by native mobile app conventions — clean surfaces, clear typography, minimal chrome, and subtle animations. PWAs blurred the line visually between native and web apps. The era emphasized refinement, responsiveness, and performance-focused visuals over ornament.",
+        "Web design matured into a highly polished, grid-based, accessibility-aware discipline. CSS Grid and Flexbox enabled layouts that were once impossible without hacks. Dark mode became mainstream, bringing dual-theme design systems. Visuals became influenced by native mobile app conventions - clean surfaces, clear typography, minimal chrome, and subtle animations. PWAs blurred the line visually between native and web apps. The era emphasized refinement, responsiveness, and performance-focused visuals over ornament.",
     },
 
     {
@@ -287,7 +287,7 @@ const CONTENT = {
         {
           headline: "AI-Assisted Browsing (2022–2024)",
           description:
-            "Major browsers integrated or experimented with AI features — in-browser summarization, chat assistants, writing tools, and tab organization — often via partnerships between browser vendors and AI services. These tools reduced cognitive load and enhanced productivity. AI-driven insights began shaping how users explore and understand the web.",
+            "Major browsers integrated or experimented with AI features - in-browser summarization, chat assistants, writing tools, and tab organization - often via partnerships between browser vendors and AI services. These tools reduced cognitive load and enhanced productivity. AI-driven insights began shaping how users explore and understand the web.",
           image: "/ressources/AiAssistedBrowsingEdge.png",
         },
         {
@@ -459,7 +459,7 @@ export default function BrowserTimeline() {
       setScrollY((s) => wrapScroll(s));
     }
     // if scrollY drifts slightly beyond bounds, also wrap
-    // (no dependencies — we check whenever scrollY changes)
+    // (no dependencies - we check whenever scrollY changes)
   }, [scrollY, cycle]);
 
   // Compute scale for a given box index (based on its center Y vs container center)
@@ -584,7 +584,7 @@ export default function BrowserTimeline() {
                   <div className="flex-1">
                     <h1 className="text-5xl font-extrabold text-emerald-200 tracking-tight">{selectedGroup != null ? TIMEFRAMES[selectedGroup] : "A visual history of browsers"}</h1>
                     <p className="mt-3 text-lg text-white/80 max-w-2xl">
-                      {selectedGroup != null ? CONTENT.timeframes[selectedGroup].introduction : "Explore the major eras of web browsers — from early GUI experiments to modern GPU-powered web platforms. Click any item on the timeline to jump to a focused article."}
+                      {selectedGroup != null ? CONTENT.timeframes[selectedGroup].introduction : "Explore the major eras of web browsers - from early GUI experiments to modern GPU-powered web platforms. Click any item on the timeline to jump to a focused article."}
                     </p>
                   </div>
 
